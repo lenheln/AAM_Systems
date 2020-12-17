@@ -1,0 +1,44 @@
+REST API каталог продуктов
+
+Добавление нового продукта
+/products  POST
+Для добавления продукта необходимо отправить POST- запрос на endPoint /products
+В теле запроса передать JSON
+
+Пример запроса:
+POST "http://localhost:8080/products"
+{
+    "name" : "car",
+    "price": 10000,
+    "description": "Toyota"
+} 
+
+Удаление продукта
+/products/1  DELETE
+Для удаления продукта необходимо отправить DELETE запрос на endPoint /products/id
+В качестве id указывается идентификатор продукта для удаления
+
+Пример запроса:
+DELETE "http://localhost:8080/products/1"
+
+Поиск продукта по вхождению строки в название продукта
+/products/?name=string	GET
+Для поиска продукта необходимо отправить GET запрос на endPoint  /products/?name=string
+В качестве string указать поисковый запрос
+
+Пример запроса:
+GET "http://localhost:8080/products/?name=book
+
+Обновление информации о продукте
+/products/1   PUT
+Для обновления информации о продукте необходимо отправить PUT запрос на endPoint  /products/id/
+В качестве id указывается идентификатор продукта для обновления
+В теле запроса передать JSON с обновленной информацией
+
+Пример запроса:
+PUT "http://localhost:8080/products/1"
+{
+    "name" : "New car",
+    "price": 15000,
+    "description": "Toyota RAF4"
+} 

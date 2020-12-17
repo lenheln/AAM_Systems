@@ -11,7 +11,7 @@ REST API каталог продуктов
 ОПИСАНИЕ API
 
 Добавление нового продукта
-/products  POST
+POST /products
 Для добавления продукта необходимо отправить POST- запрос на endPoint /products
 В теле запроса передать JSON
 
@@ -24,7 +24,7 @@ POST "http://localhost:8080/products"
 } 
 
 Удаление продукта
-/products/1  DELETE
+DELETE  /products/1  
 Для удаления продукта необходимо отправить DELETE запрос на endPoint /products/id
 В качестве id указывается идентификатор продукта для удаления
 
@@ -32,7 +32,7 @@ POST "http://localhost:8080/products"
 DELETE "http://localhost:8080/products/1"
 
 Поиск продукта по вхождению строки в название продукта
-/products/?name=string	GET
+GET  /products/?name=string	
 Для поиска продукта необходимо отправить GET запрос на endPoint  /products/?name=string
 В качестве string указать поисковый запрос
 
@@ -40,7 +40,7 @@ DELETE "http://localhost:8080/products/1"
 GET "http://localhost:8080/products/?name=book
 
 Обновление информации о продукте
-/products/1   PUT
+PUT  /products/1   
 Для обновления информации о продукте необходимо отправить PUT запрос на endPoint  /products/id/
 В качестве id указывается идентификатор продукта для обновления
 В теле запроса передать JSON с обновленной информацией

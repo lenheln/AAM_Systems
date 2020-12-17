@@ -4,7 +4,9 @@ import elena.kozlova.AAM_Systems.dto.ProductDto;
 import elena.kozlova.AAM_Systems.entity.Product;
 import elena.kozlova.AAM_Systems.service.ProductService;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -45,7 +47,7 @@ public class ProductController {
      * @return список продуктов, удовлетворяющих запросу
      */
     @GetMapping
-    public List<Product> findProductById(@RequestParam String name){
+    public List<Product> findProductByName(@RequestParam String name){
         return productService.findProductByName(name);
     }
 

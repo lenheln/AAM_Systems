@@ -1,5 +1,15 @@
 REST API каталог продуктов
 
+Используемый стек:
+* SpringBoot
+* SpringWeb
+* SpringData
+* Lombok
+* Postgres
+* Maven
+
+ОПИСАНИЕ API
+
 Добавление нового продукта
 /products  POST
 Для добавления продукта необходимо отправить POST- запрос на endPoint /products
